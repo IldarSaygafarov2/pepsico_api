@@ -1,9 +1,13 @@
 from ninja import Router
+from core.apps.about.models import MissionAndValue
+from core.api.core.schemas.about import MissionAndValueSchema
 
 router = Router(
     tags=['About']
 )
 
-@router.get('/')
+
+@router.get('/missions_and_values', response=list[MissionAndValueSchema])
 def get_about(request):
-    return []
+    items = MissionAndValue.objects.all()
+    return items

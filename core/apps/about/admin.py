@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import MissionAndValue
+
+
+
+@admin.register(MissionAndValue)
+class MissionAndValueAdmin(admin.ModelAdmin):
+    pass

@@ -1,12 +1,14 @@
 from ninja import Router
-
+from core.apps.history.models import BrandHistory
+from core.api.core.schemas.history import BrandHistorySchema
 
 router = Router(
     tags=['History']
 )
 
 
-@router.get('/')
+@router.get('/brand', response=list[BrandHistorySchema])
 def get_history(request):
-    return []
+    items = BrandHistory.objects.all()
+    return items
     
