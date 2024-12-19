@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Product, ProductSize
+
+
+class ProductSizeInline(admin.StackedInline):
+    model = ProductSize
+    extra = 1
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    pass

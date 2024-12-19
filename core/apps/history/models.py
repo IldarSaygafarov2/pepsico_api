@@ -16,6 +16,15 @@ class BrandHistory(models.Model):
 
 
 class BrandHistoryImage(models.Model):
-    brand_history = models.ForeignKey(BrandHistory, on_delete=models.CASCADE, related_name="images")
-    image = models.ImageField(upload_to='history/images')
+    brand_history = models.ForeignKey(
+        BrandHistory, on_delete=models.CASCADE, related_name="images"
+    )
+    image = models.ImageField(upload_to="history/images")
 
+
+class PhotoGallery(models.Model):
+    image = models.ImageField(upload_to="gallery/", verbose_name="Фото")
+
+    class Meta:
+        verbose_name = 'Галлерея на странице "О нас"'
+        verbose_name_plural = 'Галлерея на странице "О нас"'

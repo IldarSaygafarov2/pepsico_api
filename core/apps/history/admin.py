@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import BrandHistoryImage, BrandHistory
+from .models import BrandHistoryImage, BrandHistory, PhotoGallery
 
 
 class BrandHistoryImageInline(admin.StackedInline):
@@ -13,3 +13,6 @@ class BrandHistoryAdmin(admin.ModelAdmin):
     inlines = [BrandHistoryImageInline]
 
 
+@admin.register(PhotoGallery)
+class PhotoGalleryAdmin(admin.ModelAdmin):
+    pass
