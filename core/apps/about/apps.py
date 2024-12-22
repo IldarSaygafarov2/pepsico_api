@@ -2,5 +2,6 @@ from django.apps import AppConfig
 
 
 class AboutConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'core.apps.about'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "core.apps.about"
+    verbose_name = "Страница 'О нас'"

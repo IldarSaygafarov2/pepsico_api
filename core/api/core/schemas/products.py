@@ -11,5 +11,21 @@ class ProductShortSchema(Schema):
 
 
 class ProductListSchema(Schema):
-    # category: CategoryOut
+    category: CategoryOut
     products: list[ProductShortSchema]
+
+
+class ProductSizeSchema(Schema):
+    id: int
+    size: float
+
+
+class ProductDetailSchema(Schema):
+    id: int
+    name: str
+    about_product: str
+    about_brand: str
+    image: str
+    description: Optional[str]
+    category: CategoryOut
+    sizes: Optional[list[ProductSizeSchema]]

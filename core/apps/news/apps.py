@@ -2,5 +2,6 @@ from django.apps import AppConfig
 
 
 class NewsConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'core.apps.news'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "core.apps.news"
+    verbose_name = "Новости и ивенты"

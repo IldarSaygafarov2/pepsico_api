@@ -10,4 +10,4 @@ class ProductSizeInline(admin.StackedInline):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    inlines = [ProductSizeInline]
