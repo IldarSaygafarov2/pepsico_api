@@ -1,4 +1,6 @@
+from django.http import HttpRequest
 from ninja import Router
+
 from core.api.core.schemas.categories import HomePageCategorySchema
 from core.api.core.schemas.products import ProductDetailSchema
 from core.api.core.services.categories import category_service
@@ -10,7 +12,7 @@ router = Router(
 
 
 @router.get("/categories", response=list[HomePageCategorySchema])
-def get_home_categories(request):
+def get_home_categories(request: HttpRequest):
     return category_service.get_categories()
 
 

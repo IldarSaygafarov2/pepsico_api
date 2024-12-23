@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import BrandHistoryImage, BrandHistory, PhotoGallery
+from modeltranslation.admin import TranslationAdmin
 
 
 class BrandHistoryImageInline(admin.StackedInline):
@@ -9,7 +10,7 @@ class BrandHistoryImageInline(admin.StackedInline):
 
 
 @admin.register(BrandHistory)
-class BrandHistoryAdmin(admin.ModelAdmin):
+class BrandHistoryAdmin(TranslationAdmin):
     inlines = [BrandHistoryImageInline]
 
 

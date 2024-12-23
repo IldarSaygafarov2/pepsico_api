@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "modeltranslation",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # custom apps
     "core.apps.about.apps.AboutConfig",
     "core.apps.history.apps.HistoryConfig",
     "core.apps.news.apps.NewsConfig",
@@ -131,3 +133,23 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ("ru", gettext("Russian")),
+    ("uz", gettext("Uzbek")),
+    ("en", gettext("English")),
+)
+# MODELTRANSLATION_DEFAULT_LANGUAGE = "ru"
+# MODELTRANSLATION_LANGUAGES = ("en", "uz")
+
+MODELTRANSLATION_TRANSLATION_FILES = (
+    "core.apps.about.translation",
+    "core.apps.categories.translation",
+    "core.apps.history.translation",
+    "core.apps.news.translation",
+    "core.apps.products.translation",
+    "core.apps.vacancies.translation",
+)

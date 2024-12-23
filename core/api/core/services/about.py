@@ -4,8 +4,8 @@ from core.apps.history.models import PhotoGallery
 
 class AboutService:
     def get_missions_and_values(self):
-        result = MissionAndValue.objects.all()
-        return result
+        objects = MissionAndValue.objects.all()
+        return objects
 
     def get_photos_gallery(self):
         gallery = PhotoGallery.objects.all()

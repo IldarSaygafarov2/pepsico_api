@@ -3,7 +3,8 @@ from core.apps.categories.models import Category
 
 class CategoryService:
     def get_categories(self):
-        return Category.objects.all()
+        categories = Category.objects.all()
+        return categories
 
 
 category_service = CategoryService()

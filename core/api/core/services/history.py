@@ -3,7 +3,8 @@ from core.apps.history.models import BrandHistory
 
 class HistoryService:
     def get_history_items(self):
-        return BrandHistory.objects.all()
+        objects = BrandHistory.objects.all()
+        return objects
 
 
 history_service = HistoryService()
