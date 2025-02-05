@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-)xkis@hwf_p_o544w_iut41(=npref@%ct=ho$wdt4%cwhdobe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "pepsicoapi.pythonanywhere.com",
+    "127.0.0.1",
+]
 
 
 # Application definition
