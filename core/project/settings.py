@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # external
+    "corsheaders",
     # custom apps
     "core.apps.about.apps.AboutConfig",
     "core.apps.history.apps.HistoryConfig",
@@ -50,6 +52,7 @@ INSTALLED_APPS = [
     "core.apps.vacancies.apps.VacanciesConfig",
     "core.apps.user_requests.apps.UserRequestsConfig",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
